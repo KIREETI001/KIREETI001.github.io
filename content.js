@@ -603,7 +603,7 @@ const PROJECTS = [
     "title": "NTU Academic & Career Co-Pilot",
     "category": "passion",
     "status": "building",
-    "lastUpdated": "[month]",
+    "lastUpdated": "updated Oct 2026",
     "module": "Unofficial · pilot cohort EEE",
     "summary": "Checks graduation and specialisation requirements, simulates CGPA under NTU's grade-free option, and maps EEE specialisations to careers.",
     "result": "Rule engine with 20 passing tests · 8 specialisation pages · FGO/CGPA optimizer screen",
@@ -750,7 +750,7 @@ const EXPERIENCE = [
     "org": "SMRT Corporation",
     "rank": 1,
     "role": "Executive Engineer Intern",
-    "when": "Jan 2026 – present",
+    "when": "Jan – Jul 2026",
     "kind": "work",
     "bullets": [
       "Built an ETL pipeline that merges Automatic Train Supervision server logs from several sources into one dataset for health monitoring and anomaly detection",
