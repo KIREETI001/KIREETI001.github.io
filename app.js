@@ -83,11 +83,11 @@ function open(slug){
     ${p.video?`<figure class="video-fig"><video controls playsinline preload="none" poster="${p.cover||""}" src="${p.video}"></video><figcaption>Our entry for the video side contest</figcaption></figure>`:""}
     <div class="res">${resHtml(p.result)}</div>
     <dl class="facts">${facts.map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
-    <div class="body">${(p.body||[["Problem","[Who had the problem and why it mattered.]"],["What I built",p.summary+" [How it works, the hard part, your part on the team.]"],["Result","[The number, the placement, what users or judges said.]"]]).map(([k,v])=>`<p><b>${esc(k)}.</b> ${esc(v)}</p>`).join("")}</div>
+    <div class="body">${(p.body||[]).map(([k,v])=>`<p><b>${esc(k)}.</b> ${esc(v)}</p>`).join("")}</div>
     ${p.authors?`<p class="authors"><b>Authors.</b> ${esc(p.authors)}</p>`:""}
     ${p.lessons?`<div class="lessons"><h4>${esc(p.lessonsTitle||"Lessons learnt")}</h4><ol>${p.lessons.map(([t,d])=>`<li><b>${esc(t)}</b> ${esc(d)}</li>`).join("")}</ol>${p.strengths?`<p class="kept"><b>What held up.</b> ${esc(p.strengths)}</p>`:""}</div>`:""}
     ${p.gallery?`<div class="gal">${p.gallery.map(g=>`<figure><div class="photo has-img"><img src="${g.src}" alt="${esc(g.caption)}" loading="lazy" style="object-position:${g.pos||"50% 50%"};object-fit:${g.fit||"cover"}"></div><figcaption>${esc(g.caption)}</figcaption></figure>`).join("")}</div>`
-      :`<div class="gal">${["Screenshot of the main screen","Team at the event / hardware close-up","Architecture diagram"].map(c=>`<figure><div class="photo"><span>Photo</span></div><figcaption>[${c}]</figcaption></figure>`).join("")}</div>`}
+      :""}
     <div class="btns">${p.repo?`<a class="btn primary" href="${p.repo}" target="_blank" rel="noopener">View code on GitHub</a>`:`<span class="repo-note">${esc(p.repoNote||"Code isn't public.")}</span>`}${p.demo?`<a class="btn" href="${p.demo}" target="_blank" rel="noopener">${esc(p.demoLabel||"Live demo")}</a>`:""}</div>`;
   veil.hidden=false; document.body.style.overflow="hidden";
   $("closeD").addEventListener("click",close); $("closeD").focus();

@@ -65,16 +65,16 @@ const PROJECTS = [
     "team": "AI of Spades",
     "category": "hackathon",
     "event": "DLW Datathon 2026",
-    "organiser": "[Organiser]",
+    "organiser": "MLDA",
     "placement": 1,
     "label": "1st place",
     "sub": "Track 2 · Financial fraud detection",
-    "prize": "[Prize]",
-    "date": "2026-[MM]",
+    "prize": "A monitor for each team member",
+    "date": "2026-10",
     "summary": "Ranks transactions by fraud risk so a bank reviews the most suspicious first. 61% of its top 100 alerts are fraud, 35× the base rate.",
     "result": "1st place, Track 2 · 61% of top-100 alerts are fraud (35× base rate)",
-    "role": "[Your role]",
-    "teamSize": "[N]",
+    "role": "Model training and exploratory data analysis",
+    "teamSize": 3,
     "stack": [
       "Python",
       "scikit-learn",
@@ -122,7 +122,7 @@ const PROJECTS = [
     "team": "Saving Gaia",
     "category": "hackathon",
     "event": "Escendo Make-a-thon 2025",
-    "organiser": "[Organiser]",
+    "organiser": "Garage@EEE",
     "placement": 3,
     "label": "3rd place",
     "sub": "2nd runner-up",
@@ -130,8 +130,8 @@ const PROJECTS = [
     "date": "2025-01",
     "summary": "Fridge sensors and a tabletop scanner that warn households before food spoils.",
     "result": "3rd place (2nd runner-up) · S$500",
-    "role": "[Your role]",
-    "teamSize": "[N]",
+    "role": "Ideation and product design (my first hardware hackathon)",
+    "teamSize": 5,
     "stack": [
       "Orange Pi",
       "Gas & humidity sensors",
@@ -184,11 +184,11 @@ const PROJECTS = [
     "placement": 3,
     "label": "3rd place",
     "sub": "2nd runner-up · iNTUition Track",
-    "prize": "[Prize]",
+    "prize": "S$500",
     "date": "2025-03",
     "summary": "Clusters user complaints with NLP, asks GPT-4 for code fixes, and surfaces only fixes a developer can approve in one click. Built in 24 hours.",
     "result": "3rd place (2nd runner-up), iNTUition Track",
-    "role": "[Your role]",
+    "role": "Equal technical contribution across a team of four",
     "teamSize": 4,
     "stack": [
       "Python",
@@ -246,8 +246,8 @@ const PROJECTS = [
     "date": "2026-01",
     "summary": "Caregiver co-pilot that turns hospital discharge notes into a shared care plan. Full write-up under Projects.",
     "result": "Sponsor's Choice Award (IHH Healthcare) · S$1,000",
-    "role": "[Your role]",
-    "teamSize": "[N]",
+    "role": "Came up with the idea, built it with two teammates (team Silver Guardians)",
+    "teamSize": 3,
     "stack": [
       "Next.js",
       "Supabase",
@@ -255,7 +255,46 @@ const PROJECTS = [
     ],
     "repo": "https://github.com/KIREETI001/ALLY",
     "cover": "images/ideasjam-2026-cover.jpg",
-    "pos": "50% 45%"
+    "pos": "50% 45%",
+    "body": [
+      [
+        "Problem",
+        "Singapore has over 210,000 family caregivers. After a hospital stay they get a discharge note full of medications and warning signs, a family WhatsApp group, and a maze of subsidy schemes."
+      ],
+      [
+        "Why I built it",
+        "ALLY started at home. When my dad came back from hospital after a serious illness, I was the one working through the discharge papers, the medication schedule and the subsidy forms, and I felt every one of the pain points this app is meant to fix."
+      ],
+      [
+        "Where it started",
+        "The idea began as CareSpark, a caregiver-support MVP from TheFirst Spark build sprint on caregiver burnout: sign-in, a care dashboard, a shared family task board and support-scheme routing. It's still live. ALLY is the rebuilt, focused version."
+      ],
+      [
+        "What I built",
+        "A discharge parser that reads a photo or PDF with Claude vision and lists every medication and task with the exact line it came from, which a family member confirms before anything goes live. Tasks sync live between relatives and the domestic helper, a five-question wizard works out subsidies from versioned rules (the AI never computes amounts), and the app runs in English, Mandarin, Malay, Tamil and Filipino."
+      ],
+      [
+        "Result",
+        "Won the IHH Healthcare Sponsor's Choice Award at IdeasJam 2026. Rebuilt as v2 in June 2026. Next step: run 20 real discharge documents through the parser and measure how many come out right without edits."
+      ]
+    ],
+    "gallery": [
+      {
+        "src": "images/ally-1.jpg",
+        "caption": "Subsidy wizard: every amount comes from versioned rules, with the official source linked.",
+        "pos": "50% 0%"
+      },
+      {
+        "src": "images/ally-2.jpg",
+        "caption": "Five languages, including Tamil and Filipino for domestic helpers.",
+        "pos": "50% 0%"
+      },
+      {
+        "src": "images/ally-3.jpg",
+        "caption": "Sign-in with email or Google.",
+        "pos": "50% 20%"
+      }
+    ]
   },
   {
     "slug": "psa-2025",
@@ -266,7 +305,7 @@ const PROJECTS = [
     "organiser": "PSA",
     "placement": "Special Prize",
     "sub": "Video side contest",
-    "prize": "[Prize]",
+    "prize": "S$200",
     "date": "2025-10",
     "summary": "Our behind-the-scenes video won the Code Sprint's side contest. The main entry was a scheduler that moved 20,000 container jobs 4.31% faster than the baseline.",
     "result": "Special Prize in the video side contest",
@@ -318,7 +357,7 @@ const PROJECTS = [
     "organiser": "MLDA",
     "placement": "Finalist",
     "finalist": true,
-    "date": "2025-[MM]",
+    "date": "2025-10",
     "summary": "Classifies cardiotocography readings as normal, suspect or pathologic, comparing four models.",
     "result": "Finalist · XGBoost: 0.915 balanced accuracy, 0.917 macro-F1 on the test set",
     "role": "Team member, presented at the finals",
@@ -374,8 +413,8 @@ const PROJECTS = [
     "lastUpdated": "v2 rebuilt Jun 2026",
     "summary": "Turns hospital discharge notes into a shared care plan for families and their domestic helpers, in five languages.",
     "result": "IdeasJam 2026 · Sponsor's Choice (IHH Healthcare), S$1,000",
-    "role": "Builder · team Silver Guardians at IdeasJam",
-    "teamSize": "[N]",
+    "role": "Came up with the idea, built it with two teammates (team Silver Guardians)",
+    "teamSize": 3,
     "stack": [
       "Next.js 14",
       "TypeScript",
@@ -389,6 +428,10 @@ const PROJECTS = [
       [
         "Problem",
         "Singapore has over 210,000 family caregivers. After a hospital stay they get a discharge note full of medications and warning signs, a family WhatsApp group, and a maze of subsidy schemes."
+      ],
+      [
+        "Why I built it",
+        "ALLY started at home. When my dad came back from hospital after a serious illness, I was the one working through the discharge papers, the medication schedule and the subsidy forms, and I felt every one of the pain points this app is meant to fix."
       ],
       [
         "Where it started",
@@ -787,7 +830,7 @@ const LEADERSHIP = [
     "when": "Jun – Jul 2025 · Singapore & Hanoi",
     "kind": "leadership",
     "bullets": [
-      "Selected for the S$7,600 TF LEaRN @NTU scholarship",
+      "Selected for the TF LEaRN @NTU scholarship",
       "Worked in cross-cultural teams with students from across ASEAN and India; pitched Alixca, a support tool for students with dyslexia",
       "Company visits in Hanoi, including VinFast's smart factory, Shopee and VinUni"
     ],
