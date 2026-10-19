@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Attili Kireeti Aditya Kumar</title>
+<meta name="description" content="Final-year EEE at NTU Singapore building practical tools with data, machine learning and hardware. Hackathon awards, projects and experience.">
+<meta property="og:title" content="Attili Kireeti Aditya Kumar">
+<meta property="og:description" content="Data, machine learning and hardware. Final-year EEE at NTU Singapore.">
+<meta property="og:image" content="https://kireeti001.github.io/images/portrait.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#121416">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121416'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23cfae6a'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Direction: an evening gallery. Dark, quiet, generous. One bold moment: the wall of fame
+   as a lit museum room (spotlights + gilt frames + brass plaques). Brass is the only accent.
+   Type: Newsreader (display + prose) / Schibsted Grotesk (UI, small text). */
+:root{
+  --bg:#121416; --bg-2:#181a1d; --room:#1b1a17; --ink:#ecebe6; --ink-2:#a3a5a8; --ink-3:#707479;
+  --line:rgba(236,235,230,.10); --line-2:rgba(236,235,230,.18);
+  --brass:#cfae6a; --brass-ink:#1a1408;
+  --c-hack:#e08a72; --c-passion:#86c79c; --c-school:#93b0e8; --c-work:#b9a0e6; --c-lead:#e5ad74;
+  --veil:rgba(6,7,8,.78);
+  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-head:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+a{color:var(--ink);text-decoration-color:var(--line-2);text-underline-offset:4px}
+a:hover{text-decoration-color:var(--brass)}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:3px}
+::selection{background:var(--brass);color:var(--brass-ink)}
+
+header.top{display:flex;justify-content:space-between;align-items:center;gap:12px 32px;flex-wrap:wrap;padding-block:28px}
+.name{font-family:var(--f-display);font-size:24px;font-weight:500;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+nav ul{display:flex;gap:4px 28px;list-style:none;margin:0;padding:0;font-size:15px;flex-wrap:wrap}
+nav a{color:var(--ink-2);text-decoration:none;transition:color .15s}
+nav a:hover{color:var(--ink)}
+.socials{display:flex;gap:4px 20px;flex-wrap:wrap;font-size:15px}
+.soc{color:var(--ink-2);text-decoration:none;transition:color .15s}
+.soc:hover{color:var(--brass)}
+
+/* hero */
+.hero{min-height:min(78vh,760px);padding-block:56px 40px;display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:64px;align-items:center}
+.hero .hero-photo{aspect-ratio:9/10;width:100%;border-radius:18px;filter:saturate(.9)}
+.hero-main{display:flex;flex-direction:column;gap:26px;min-width:0}
+.hero h1{font-family:var(--f-display);font-weight:400;font-size:clamp(44px,6vw,80px);line-height:.98;letter-spacing:-.03em;margin:0;text-wrap:balance}
+.hero h1 span{display:block}
+.hero h1 span+span{color:var(--ink-2)}
+.hero .lede{max-width:54ch;margin:0;font-family:var(--f-display);font-size:21px;line-height:1.55;color:var(--ink)}
+.avail{margin:0;display:grid;gap:8px;font-size:15px;padding-left:16px;border-left:1px solid var(--brass)}
+.avail div{display:flex;gap:4px 16px;flex-wrap:wrap}
+.avail dt{color:var(--brass);min-width:120px}
+.avail dd{margin:0;color:var(--ink-2)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{font-family:var(--f-head);font-size:15px;padding:12px 20px;border:1px solid var(--line-2);border-radius:2px;color:var(--ink);background:transparent;text-decoration:none;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.btn.primary:hover{background:var(--brass);border-color:var(--brass);color:var(--brass-ink)}
+
+.toolbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:18px 40px;margin:0;padding:28px 0 0;border-top:1px solid var(--line)}
+.toolbox dt{font-size:14px;color:var(--ink)}
+.toolbox dd{margin:4px 0 0;font-size:15px;color:var(--ink-3);line-height:1.55}
+
+/* sections */
+section{padding-block:120px 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:16px 40px;margin-bottom:36px}
+h2{font-family:var(--f-display);font-weight:400;font-size:clamp(38px,5.2vw,64px);line-height:1;letter-spacing:-.025em;margin:0;text-wrap:balance}
+.sec-note{grid-column:1;color:var(--ink-2);font-size:16px;max-width:52ch;margin:14px 0 0}
+.sec-head h2{grid-column:1}
+
+/* photos */
+.photo{position:relative;background:var(--bg-2);aspect-ratio:16/10;max-width:100%;display:grid;place-items:center;overflow:hidden}
+.photo span{font-size:13px;color:var(--ink-3)}
+.photo.has-img{display:block}
+.photo.has-img img{width:100%;height:100%;object-fit:cover;display:block}
+.mount{position:relative}
+.vid-tag{position:absolute;z-index:2;right:30px;bottom:30px;font-size:12px;background:rgba(10,10,10,.75);color:#fff;padding:3px 9px;border-radius:2px}
+.video-fig{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px}
+.video-fig video{width:min(100%,360px);aspect-ratio:9/16;background:#000;border-radius:4px}
+.video-fig figcaption{font-size:14px;color:var(--ink-2)}
+
+/* rails: arrows sit with the heading, no counters */
+.rail{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:min(86%,var(--cw,300px));gap:28px;align-items:start;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding:4px 2px 28px;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+.rail>*{scroll-snap-align:start}
+.rail-ctl{display:flex;justify-content:flex-end;margin:-84px 0 44px;pointer-events:none}
+.rail-ctl .pos{display:none}
+#featuredGrid{--cw:520px !important}
+#leadTl{--cw:340px !important}
+.rail-ctl .arrows{display:flex;gap:10px;pointer-events:auto}
+.rail-ctl button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;padding:0;transition:border-color .15s,background-color .15s}
+.rail-ctl button svg{width:18px;height:18px}
+.rail-ctl button:hover:not(:disabled){border-color:var(--ink)}
+.rail-ctl button:disabled{opacity:.25;cursor:default}
+
+/* project slides: image-led, little text */
+.card{background:none;border:0;padding:0;display:flex;flex-direction:column;gap:18px;min-width:0;text-align:left;color:var(--ink);font:inherit;cursor:pointer}
+.card .photo{border-radius:4px;aspect-ratio:16/10}
+.card .photo img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover .photo img{transform:scale(1.025)}
+.card .bd{display:flex;flex-direction:column;gap:6px}
+.card h3{order:1;margin:0;font-family:var(--f-display);font-weight:400;font-size:28px;line-height:1.15;letter-spacing:-.015em}
+.card .meta{order:2;font-size:14px;color:var(--ink-3);display:flex;gap:6px 14px;flex-wrap:wrap}
+.card .meta .chip{display:none}
+.card p{order:3;margin:6px 0 0;font-size:16px;line-height:1.55;color:var(--ink-2);max-width:52ch}
+.card .res{order:4;margin-top:10px}
+.res{font-size:15px;line-height:1.5;color:var(--brass)}
+.res b{font-weight:500;display:block}
+.res span{color:var(--ink-3)}
+.status{display:inline-flex;align-items:center;gap:7px}
+.status i{width:6px;height:6px;border-radius:50%;display:inline-block}
+.stk{color:var(--ink-3)}
+
+/* experience / leadership */
+.xcard{display:flex;flex-direction:column;gap:16px;min-width:0}
+.xcard .photo{border-radius:4px;aspect-ratio:4/3}
+.xcard .bd{display:flex;flex-direction:column;gap:4px}
+.xcard h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:24px;line-height:1.2;letter-spacing:-.01em}
+.xcard .org{font-size:15px;color:var(--ink-2)}
+.xcard .when{order:-1;font-size:13.5px;color:var(--brass);margin-bottom:4px}
+.xcard .when .chip{display:none}
+.xcard ul{margin:12px 0 0;padding:0;list-style:none;font-size:15px;line-height:1.55;color:var(--ink-2);display:flex;flex-direction:column;gap:8px}
+.xcard li{padding-left:16px;position:relative}
+.xcard li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:1px;background:var(--ink-3)}
+.rail:has(> :only-child){grid-auto-columns:min(100%,1180px)}
+@media (min-width:760px){
+  .rail > .xcard:only-child{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
+  .rail > .xcard:only-child .photo{aspect-ratio:3/2}
+  .rail > .xcard:only-child h3{font-size:36px}
+}
+
+/* ===== the bold moment: a lit museum room ===== */
+#hackathons{position:relative;margin-top:120px;padding-block:96px 88px;background:var(--room);
+  margin-inline:calc(50% - 50vw);padding-inline:max(24px,calc(50vw - 50%))}
+#hackathons>*{position:relative}
+#hackathons::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 18%,transparent 82%,rgba(0,0,0,.4)),
+  repeating-linear-gradient(90deg,transparent 0 2px,rgba(255,255,255,.012) 2px 3px)}
+#hackathons::after{content:"";position:absolute;left:0;right:0;bottom:0;height:72px;background:linear-gradient(180deg,#141310,#100f0d);border-top:1px solid rgba(255,255,255,.05);pointer-events:none}
+.fame-legend{display:flex;gap:8px 26px;flex-wrap:wrap;font-size:14px;color:var(--ink-2);margin:0 0 30px}
+.fame-legend span{display:inline-flex;align-items:center;gap:9px}
+.fame-legend i{width:14px;height:14px;border-radius:1px;background:var(--fg)}
+.rail.wall-rail{gap:56px;padding-top:70px}
+.frame{--fg:linear-gradient(135deg,#3a2a1d,#6c4e36 45%,#2f2117);background:none;border:0;padding:0;font:inherit;color:inherit;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:stretch;min-width:0;position:relative}
+/* spotlight cone over each frame; switched on when the room scrolls into view */
+.frame::before{content:"";position:absolute;left:-8%;right:-8%;top:-66px;height:calc(100% + 30px);pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 50% 58% at 50% 0%,rgba(255,232,180,.17),rgba(255,232,180,.05) 50%,transparent 70%);opacity:.15;transition:opacity 1.1s ease-out}
+.lit .frame::before{opacity:1}
+.lit .frame:nth-child(2)::before{transition-delay:.15s}.lit .frame:nth-child(3)::before{transition-delay:.3s}
+.lit .frame:nth-child(4)::before{transition-delay:.45s}.lit .frame:nth-child(n+5)::before{transition-delay:.6s}
+.frame>*{position:relative;z-index:1}
+.frame .mount{padding:14px;background:var(--fg);border-radius:2px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.22),inset 0 0 0 4px rgba(0,0,0,.2),0 2px 3px rgba(0,0,0,.5),0 30px 40px -18px rgba(0,0,0,.85);transition:transform .3s ease-out}
+.frame .mount::before{content:"";position:absolute;inset:14px;background:#efece3;box-shadow:inset 0 2px 7px rgba(0,0,0,.4)}
+.frame .photo{position:relative;z-index:1;margin:18px;aspect-ratio:4/3;box-shadow:0 0 0 1px rgba(0,0,0,.2)}
+.frame:hover .mount{transform:translateY(-4px)}
+.plaque{align-self:center;margin-top:22px;padding:9px 18px 10px;min-width:64%;max-width:100%;border-radius:1px;color:#2a210f;
+  background:linear-gradient(180deg,#ead9a8,#c8a85e 55%,#b39046);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 3px 6px rgba(0,0,0,.5)}
+.plaque .rank{font-family:var(--f-display);font-weight:500;font-size:19px;line-height:1.15}
+.plaque .ev{font-size:12.5px;line-height:1.35;margin-top:2px;opacity:.85}
+.frame .cap{margin-top:16px;font-size:15px;line-height:1.5;color:var(--ink-2);padding-inline:8px}
+.frame .cap b{font-family:var(--f-display);font-weight:400;color:var(--ink);display:block;font-size:22px;margin-bottom:4px}
+.t-gold{--fg:linear-gradient(135deg,#8a6a1c,#f0d27a 30%,#a8832c 55%,#e6c56b 78%,#7d5f17)}
+.t-silver{--fg:linear-gradient(135deg,#7f868d,#eef1f3 30%,#9aa1a8 55%,#dfe3e6 78%,#737a81)}
+.t-bronze{--fg:linear-gradient(135deg,#6e3b1d,#d9925a 30%,#8a5230 55%,#c98450 78%,#5f321a)}
+.t-honour{--fg:linear-gradient(135deg,#3a2a1d,#7a5a3f 35%,#4a3524 60%,#6c4e36 80%,#2f2117)}
+
+/* contact + footer */
+.contact-band{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:32px;padding-top:160px}
+.contact-band h2{font-size:clamp(38px,5.2vw,64px);line-height:1}
+.contact-band p{margin:20px 0 0;color:var(--ink-2);max-width:46ch}
+.contact-side{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.contact-side .email{font-family:var(--f-display);font-size:clamp(22px,2.6vw,30px);color:var(--ink);text-decoration:underline;text-decoration-color:var(--brass);text-underline-offset:6px;text-decoration-thickness:1px}
+.contact-side .email:hover{color:var(--brass)}
+footer{margin-top:96px;border-top:1px solid var(--line);padding-block:24px 40px;font-size:14px;color:var(--ink-3);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--ink-3)}
+
+/* detail view */
+.veil{position:fixed;inset:0;background:var(--veil);backdrop-filter:blur(6px);z-index:50;display:flex;justify-content:center;align-items:flex-start;overflow-y:auto;
+  padding:max(32px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) max(32px,env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.sheet{background:var(--bg-2);width:100%;max-width:900px;border:1px solid var(--line);border-radius:6px;padding:40px;display:flex;flex-direction:column;gap:24px}
+.sheet .top{display:flex;justify-content:space-between;gap:16px;align-items:start}
+.sheet .chip{font-size:13px;color:var(--ink-3) !important}
+.sheet h3{font-family:var(--f-display);font-weight:400;font-size:clamp(34px,5vw,52px);line-height:1.02;letter-spacing:-.025em;margin:8px 0 0}
+.sheet .photo{border-radius:4px}
+.sheet .res{margin:0;font-size:17px}
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,170px),1fr));gap:18px 24px;margin:0;padding-block:20px;border-block:1px solid var(--line)}
+.facts dt{font-size:13px;color:var(--ink-3)}
+.facts dd{margin:3px 0 0;font-size:15px}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:18px}
+.gal figure{margin:0}
+.gal .photo{border-radius:3px}
+.gal figcaption{font-size:14px;line-height:1.45;color:var(--ink-2);margin-top:8px}
+.lessons{border-left:1px solid var(--brass);padding:4px 0 4px 22px}
+.lessons h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:24px}
+.lessons ol{margin:14px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:12px;font-size:16px;color:var(--ink-2);max-width:68ch}
+.lessons li b{display:block;color:var(--ink);font-weight:500}
+.lessons .kept{margin:16px 0 0;font-size:16px;color:var(--ink-2)}
+.repo-note{font-size:15px;color:var(--ink-3)}
+.authors{margin:0;font-size:15px;color:var(--ink-2)}
+.sheet .body p{margin:0 0 14px;max-width:66ch;font-family:var(--f-display);font-size:19px;line-height:1.6;color:var(--ink)}
+.sheet .body b{font-family:var(--f-head);font-weight:500;font-size:15px;color:var(--brass);margin-right:4px}
+
+/* one orchestrated load: the hero settles in */
+@media (prefers-reduced-motion:no-preference){
+  .hero h1 span,.hero .lede,.hero .avail,.hero .btns,.hero .hero-photo{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero .hero-photo{animation-name:fade;animation-duration:1.2s}
+  .hero h1 span+span{animation-delay:.08s}.hero .lede{animation-delay:.18s}.hero .avail{animation-delay:.26s}.hero .btns{animation-delay:.32s}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:36px;min-height:0;padding-top:24px}
+  .hero .hero-photo{max-width:320px;border-radius:14px}
+  section{padding-top:88px}
+  #hackathons{margin-top:88px;padding-block:72px 72px}
+  .rail-ctl{display:none !important}
+  .contact-band{grid-template-columns:minmax(0,1fr);padding-top:110px}
+}
+@media (max-width:600px){
+  .frame .mount{padding:10px}.frame .mount::before{inset:10px}.frame .photo{margin:13px}
+  .sheet{padding:24px}
+  .rail.wall-rail{gap:36px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important}.frame::before{opacity:1}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top">
+    <a class="name" href="#top">Kireeti</a>
+    <nav aria-label="Sections"><ul>
+      <li><a href="#hackathons">Wall of fame</a></li>
+      <li><a href="#featured">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#leadership">Leadership &amp; interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <div class="socials" id="socialsTop"></div>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="hero-photo photo has-img portrait"><img src="images/portrait.jpg" alt="Kireeti speaking on stage with a microphone" style="object-position:50% 50%"></div>
+    <div class="hero-main">
+      <h1><span>Attili Kireeti</span><span>Aditya Kumar</span></h1>
+      <p class="lede">I build practical tools with data, machine learning and hardware, usually for problems with real people on the other end, from healthcare and finance to education. I care as much about whether the results hold up as whether the thing ships. Final-year EEE at NTU, specialising in data analytics and machine learning.</p>
+      <dl class="avail"><div><dt>Jan – May 2027</dt><dd>Part-time or flexible full-time internship</dd></div><div><dt>From Aug 2027</dt><dd>Full-time roles in data, AI and engineering</dd></div></dl>
+      <div class="btns"><a class="btn primary" href="#hackathons">See the wall of fame</a><a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a><button class="btn" id="copyEmail" type="button" data-email="kireetiattili@gmail.com">Copy email</button></div>
+    </div>
+  </div>
+  <dl class="toolbox" aria-label="Skills">
+    <div><dt>Languages &amp; tools</dt><dd>Python, SQL, C#, Git, Power BI, Vercel, Unity</dd></div>
+    <div><dt>Data</dt><dd>Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, NLTK, Excel</dd></div>
+    <div><dt>ML &amp; AI</dt><dd>LLM APIs (OpenAI, Claude, Groq), NLP pipelines, OCR, regression &amp; classification</dd></div>
+    <div><dt>Hardware</dt><dd>ESP32, Arduino, Raspberry Pi, embedded systems</dd></div>
+  </dl>
+
+  <section id="hackathons">
+    <div class="sec-head"><h2>Wall of fame</h2>
+      <p class="sec-note">Six hackathon awards from 2025 and 2026, hung in order of finish. Open a frame to see what we built.</p></div>
+    <div class="fame-legend" id="fameLegend"></div>
+    <div class="rail wall-rail" id="wall" style="--cw:290px"></div>
+  </section>
+
+  <section id="featured">
+    <div class="sec-head"><h2>Projects</h2>
+      <p class="sec-note">Strongest results first. Open any card for the full write-up, photos and code.</p></div>
+    <div class="rail" id="featuredGrid" style="--cw:330px"></div>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <div class="rail" id="expTl" style="--cw:300px"></div>
+  </section>
+
+  <section id="leadership">
+    <div class="sec-head"><h2>Leadership, volunteering &amp; interests</h2><p class="sec-note">Ordered by scale of responsibility, then the things I do for fun.</p></div>
+    <div class="rail" id="leadTl" style="--cw:300px"></div>
+  </section>
+
+
+  <section id="contact" class="contact-band">
+    <div><h2>Let's connect!</h2><p>Hiring for an internship from January 2027 or a full-time role from August 2027? I'd like to hear about it.</p></div>
+    <div class="contact-side"><a class="email" href="mailto:kireetiattili@gmail.com">kireetiattili@gmail.com</a><div class="socials" id="socialsBottom"></div></div>
+  </section>
+  <footer><span>© 2026 Attili Kireeti Aditya Kumar</span><a href="#top" style="color:inherit">Back to top</a></footer>
+</div>
+
+<div class="veil" id="veil" hidden>
+  <article class="sheet" role="dialog" aria-modal="true" aria-labelledby="dTitle" id="sheet"></article>
+</div>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
