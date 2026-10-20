@@ -244,7 +244,7 @@ const PROJECTS = [
     "sub": "IHH Healthcare",
     "prize": "S$1,000",
     "date": "2026-01",
-    "summary": "Caregiver co-pilot that turns hospital discharge notes into a shared care plan. Full write-up under Projects.",
+    "summary": "Turns a hospital discharge note into a shared care plan for families and their domestic helpers, in five languages. Built from my own time as a caregiver.",
     "result": "Sponsor's Choice Award (IHH Healthcare) · S$1,000",
     "role": "Came up with the idea, built it with two teammates (team Silver Guardians)",
     "teamSize": 3,
