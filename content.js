@@ -612,7 +612,7 @@ const PROJECTS = [
     "status": "live",
     "lastUpdated": "scanned 18 Oct 2026",
     "summary": "Answers one question: which hackathons, fellowships and accelerators close in the next 30 days that fit me?",
-    "result": "438 opportunities indexed · daily automated scan",
+    "result": "440 opportunities tracked · daily automated scan",
     "role": "Solo builder",
     "teamSize": 1,
     "stack": [
@@ -637,7 +637,19 @@ const PROJECTS = [
       ]
     ],
     "cover": "images/hackorg-cover.jpg",
-    "pos": "0% 0%"
+    "pos": "50% 0%",
+    "gallery": [
+      {
+        "src": "images/hackorg-1.jpg",
+        "caption": "The agenda: everything grouped by how soon it closes, with the day count up front.",
+        "pos": "50% 0%"
+      },
+      {
+        "src": "images/hackorg-2.jpg",
+        "caption": "Detail view: countdown, eligibility, prizes and a direct link to apply.",
+        "pos": "100% 0%"
+      }
+    ]
   },
   {
     "slug": "eee-copilot",
@@ -675,7 +687,7 @@ const PROJECTS = [
       ]
     ],
     "cover": "images/eee-copilot-cover.jpg",
-    "pos": "0% 0%",
+    "pos": "50% 0%",
     "gallery": [
       {
         "src": "images/eee-copilot-1.jpg",
@@ -685,7 +697,7 @@ const PROJECTS = [
       {
         "src": "images/eee-copilot-2.jpg",
         "caption": "Specialisation page: electives, prerequisites and the rule for claiming the track.",
-        "pos": "0% 0%"
+        "pos": "50% 0%"
       }
     ]
   },
